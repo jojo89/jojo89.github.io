@@ -375,6 +375,11 @@ Full-Width Styles
   display:inline-block;
   margin-left: 15px;
 }
+.social img {
+margin-left: 97px;
+border: none;
+box-shadow: none;
+}
 
 
 
