@@ -64,7 +64,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
-  color: #FFF;
+  color: black;
   font-family: 'Share Tech', sans-serif;
   letter-spacing: -1px;
 }
@@ -172,6 +172,11 @@ pre {
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   overflow: auto;
+  border-radius: 35px;
+  border-color: black;
+  border-width: 12px;
+  border-style: solid;
+  border-width: 15px;
 }
 
 code {
@@ -273,7 +278,7 @@ Full-Width Styles
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
-  background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+  background: url('../images/blacktocat.png') #76C3FF no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   border-bottom-left-radius: 2px;
@@ -281,12 +286,12 @@ Full-Width Styles
 }
 
 #header_wrap {
-  background: #DD3737;
-  background: -moz-linear-gradient(top, #CC6F6F, #BE1414));
-  background: -webkit-linear-gradient(top, #CC6F6F, #BE1414));
-  background: -ms-linear-gradient(top, #CC6F6F, #BE1414));
-  background: -o-linear-gradient(top, #CC6F6F, #BE1414));
-  background: linear-gradient(top, #CC6F6F, #BE1414));
+  background: #FFFFFF;
+  background: -moz-linear-gradient(top, #FFFFFF, #BE1414));
+  background: -webkit-linear-gradient(top, #FFFFFF, #BE1414));
+  background: -ms-linear-gradient(top, #FFFFFF, #BE1414));
+  background: -o-linear-gradient(top, #FFFFFF, #BE1414));
+  background: linear-gradient(top, #FFFFFF, #BE1414));
 }
 
 #header_wrap .inner {
@@ -295,14 +300,26 @@ Full-Width Styles
 
 #project_title {
   margin: 0;
-  color: #fff;
+  color: #000;
   font-size: 42px;
   font-weight: 700;
   text-shadow: #111 0px 0px 10px;
 }
 
+ul.page-list{
+  text-align: center;
+  padding-top: 50px;
+}
+
+.page-list li{
+  display: inline-block;
+  padding: 23px;
+  font-family: 'Share Tech', sans-serif;
+  font-size: 50px;
+}
+
 #project_tagline {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.7);
   font-size: 24px;
   font-weight: 300;
   background: none;
@@ -354,10 +371,16 @@ Full-Width Styles
   background: url(../images/sprite_download.png) no-repeat top right;
 }
 
+.tab {
+    display: none;
+}
+
 #main_content_wrap {
-  background: #191955;
+  background: #FFFFFF;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
+  color: black;
+  
 }
 
 #main_content {
@@ -365,7 +388,7 @@ Full-Width Styles
 }
 
 #footer_wrap {
-  background: #DD3737;
+  background: #FFFFFF;
 }
 .buzz li{
   display: inline;

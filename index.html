@@ -20,6 +20,8 @@
   ga('send', 'pageview');
 
 </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script src="javascripts/main.js"></script>
   </head>
 
   <body>
@@ -34,24 +36,33 @@
 
         </header>
     </div>
-
+    
+<ul class="page-list tabs">
+  <li class="active"><a class="#tab1">Bio</a></li>
+  <li><a class="#tab2">Projects</a></li>
+  <li><a class="#tab3">Snippets</a></li>
+  <li><a class="#tab4">Contact</a></li>
+</ul>
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
 <a name="joseph-burtofts-portfolio-page" class="anchor" href="#joseph-burtofts-portfolio-page"><span class="octicon octicon-link"></span></a></h1>
 
+<div class="tab" id="tab1">
 <h2>
-<a name="about-me" class="anchor" href="#about-me"><span class="octicon octicon-link"></span></a>About Me</h2>
+  <a name="about-me" class="anchor" href="#about-me">
+    <span class="octicon octicon-link"></span>
+  </a>About Me
+</h2>
 
 <div class="personal">
-<p>Developer of web-based applications and fan of object-oriented design. Currently living in the city of Cin and working with some true class acts at <a href="http://www.ahalogy.com/">Ahalogy</a></p>
+  <p>Developer of web-based applications and fan of object-oriented design. Currently living in the city of Cin and working with some true class acts at <a href="http://www.ahalogy.com/">Ahalogy</a></p>
 <img src="https://1.gravatar.com/avatar/685a7bcfc0fd1d4b4987e349b94c58f0?d=https%3A%2F%2Fidenticons.github.com%2Fb1969092186685f7f567e310e23746e7.png&r=x&s=440" class="photo">
 </div>
 
 <h2>
 <a name="relevant-skills" class="anchor" href="#relevant-skills"><span class="octicon octicon-link"></span></a>Relevant Skills</h2>
-
 <ul class="skillz">
   <li>Ruby</li>
   <li>Cucumber</li>
@@ -65,9 +76,18 @@
   <li>Redis</li>
   <li>Heroku</li>
 </ul>
-<h2>
-<a name="projects" class="anchor" href="#projects"><span class="octicon octicon-link"></span></a>Projects</h2>
 
+
+<h2>
+<a name="projects" class="anchor" href="#projects"><span class="octicon octicon-link"></span></a>Work Experience</h2>
+<h2>
+<ul class="skillz">
+  <li><a href="https://visible.vc/">Visible </a>- Contracted Web Developer</li>
+  <li><a href="http://www.ahalogy.com/">Ahalogy </a>- Rails Developer</li>
+</ul>
+</div>
+
+<div class="tab" id="tab2">
 <h3>
 <a name="city-pulse" class="anchor" href="#city-pulse"><span class="octicon octicon-link"></span></a><a href="http://www.citypulse.io/">City Pulse</a>
 </h3>
@@ -105,10 +125,62 @@
 <h5>
 <a name="repo-1" class="anchor" href="#repo-1"><span class="octicon octicon-link"></span></a><a href="https://github.com/jojo89/goog_the_map">Repo</a>
 </h5>
+</div>
 
+<div class="tab" id="tab3">
+<h2>
+  <a name="about-me" class="anchor" href="#about-me">
+    <span class="octicon octicon-link"></span>
+  </a>Snippets
+</h2>
+<p>This code snippet is from a project where I was implementing an html parser in ruby. I had a situation where I had to split an html element at certain word, but given the fact that html elements are often nested I had to develop a recursive method that would divide each html element until it's contents contained only text.</p>
+<pre>
+  #this is a method on a class that is called paragraph
+  #paragraph class iherits from the element class
+  #the idea is that if a paragraph is too large we call this method and split it at the paragraphs splitting point
+  #this recursively calls split_element in the event that the splitting point falls upon an element
+  
+  def split_paragraph
+    element_children.each do |element|
+      if words_left_in_current >= element.word_count
+        current.add_child(element.nokogiri_object)
+      elsif element.name == 'text'
+        split_text_node(element)
+      else
+        element.split_element(words_left_in_current).each_with_index do |half, index|
+          pair[index].add_child(half.nokogiri_object)
+        end
+      end
+    end
+    pair
+  end
+
+  def split_element(words_left)
+    element_children.each do |element|
+      if words_left >= element.word_count
+        current(words_left).add_child(element.nokogiri_object)
+        words_left -= element.word_count
+      elsif first_card_is_full == true
+        pair[1].add_child(element.nokogiri_object)
+      elsif element.name == 'text'
+        split_text_node(element, words_left)
+        self.first_card_is_full = true
+      else
+        split_and_add_child(element, words_left)
+      end
+    end
+    pair
+  end
+</pre>
+<pre>
+
+</pre>
+</div>
+
+<div class="tab" id="tab4">
+<p>Contact</p>
 <h3>
 <a name="fellow-contributors-1" class="anchor" href="#fellow-contributors-1"><span class="octicon octicon-link"></span></a>Fellow developers I've had the pleasure to work with. </h4>
-
 <ul>
 <li><a href="https://github.com/Geesu" class="user-mention">@Geesu</a></li>
 <li><a href="https://github.com/RobinDaugherty" class="user-mention">@RobinDaugherty</a></li>
@@ -120,13 +192,14 @@
 <li><a href="https://github.com/hdicksonjr" class="user-mention">@hdicksonjr</a></li>
 <li><a href="https://github.com/scottmascio2115" class="user-mention">@scottmascio2115</a></li>
 </ul>
-<p>Contact</p>
+
 
 <p><a href="http://www.linkedin.com/in/jburtoft">LinkedIn</a>
 <a href="mailto:josephburtoft89@gmail.com">josephburtoft89@gmail.com</a>
 574-527-3094</p>
       </section>
-    </div>
+    </div>    
+  </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
