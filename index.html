@@ -1,249 +1,703 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Jojo89.github.io : Thank you for visiting my page. Hopefully this will give you some idea of where my abilities lie as a developer! " />
-<link href='http://fonts.googleapis.com/css?family=Share+Tech|Antic+Slab' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<title>Joseph Burtoft | Web Developer</title>
+<style type="text/css">
 
-    <title>Jojo89.github.io</title>
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+p,
+pre {
+  margin: 1em 0;
+}
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+form {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *height: 13px;
+  *width: 13px;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+body.pdf {
+  color: black;
+}
+body.pdf a {
+  text-decoration: none;
+  color: black;
+}
+body.pdf .container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  background: none;
+  border: none;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+body.pdf .resume {
+  position: relative;
+  padding: 40px 80px;
+}
+body.pdf a[href$='.pdf'] {
+  display: none;
+}
+body.pdf h1 {
+  letter-spacing: 0;
+  margin-top: 0;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+body.pdf h2 {
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+}
+body.pdf h3 {
+  float: left;
+  width: 16%;
+  font-style: normal;
+}
+body.pdf h3+p {
+  float: left;
+  width: 84%;
+}
+body.pdf blockquote {
+  top: 40px;
+  right: 50px;
+  position: absolute;
+}
+body.pdf ul li {
+  width: 28%;
+  float: left;
+}
+body.pdf ul dl {
+  margin: 0;
+  padding: 0.3em 0 0;
+}
+body.pdf ul dl dt {
+  font-size: 122%;
+  font-weight: normal;
+  margin: 0 0 .75em;
+}
+body.pdf ul dl dd {
+  padding: 0 4em 0 0;
+}
+body.pdf ol {
+  float: left;
+  width: 84%;
+  margin: .7em 0 0;
+}
+body.pdf ol li {
+  width: 33%;
+  margin: 0;
+}
+body.pdf ol li:nth-child(3n) {
+  width: 34%;
+}
+body.pdf ol li:nth-child(1),
+body.pdf ol li:nth-child(2),
+body.pdf ol li:nth-child(3) {
+  border-top: none;
+}
+body.pdf dl {
+  margin: .7em 0 0;
+  page-break-inside: avoid !important;
+  display: block;
+  width: 84%;
+  float: left;
+}
+body.pdf dl strong {
+  float: right;
+  margin-top: -2em;
+}
+body.pdf dl em {
+  font-size: 130%;
+  font-style: normal;
+}
 
-  ga('create', 'UA-45516534-1', 'jojo89.github.io');
-  ga('send', 'pageview');
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+body {
+  font-family: 'Hoefler Text', Times New Roman, Times, serif;
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+ul dl dt {
+  font-family: Futura, "Century Gothic", AppleGothic, sans-serif;
+}
+.container {
+  margin: 0 auto;
+  padding: 0;
+  background: rgb(175, 175, 175);
+  border: solid #000;
+  border-width: 8px 0 2px 0;
+  text-align: left;
+}
+.resume {
+  position: relative;
+  padding: 10px 20px;
+}
+a {
+  color: #990003;
+}
+a[href$='.pdf'] {
+  display: inline-block;
+  background: #666;
+  color: white;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+  text-decoration: none;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4em;
+}
+hr {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 18px auto;
+  width: 100%;
+  clear: both;
+  border: none;
+  border-top: 1px solid #CCC;
+  font-size: 1px;
+  line-height: 0;
+  overflow: visible;
+  page-break-after: avoid;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-style: italic;
+  letter-spacing: -1px;
+  font-weight: normal;
+}
+h3 {
+  margin: 0;
+  padding: 0 0 .5em;
+  font-size: 150%;
+  font-style: italic;
+  font-weight: normal;
+}
+h3+p {
+  margin: .6em 0 16px;
+  padding: 0;
+  display: block;
+  font-size: 104%;
+  line-height: 24px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+}
+ul dl {
+  margin: .3em 0 0;
+  padding: 0;
+  width: 100%;
+}
+ul dl dt {
+  font-size: 100%;
+}
+ul dl dd {
+  margin: 0 0 1em;
+  padding: 0 2em 0 0;
+  font-size: .8em;
+  line-height: 1.5em;
+}
+ol {
+  margin: 0;
+  padding: 0 0 .75em;
+  width: 84%;
+  display: inline-block;
+}
+ol li {
+  margin: 0 0 0 1em;
+  padding: 0;
+  border-top: 1px solid #CCCCCC;
+  width: 100%;
+  float: left;
+  list-style: none;
+  line-height: 24px;
+  font-size: 14px;
+}
+ol li:nth-child(1) {
+  border-top: none;
+}
+dl {
+  display: inline-block;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+}
+dl dt {
+  margin: 0;
+  padding: 0;
+  font-size: 140%;
+}
+dl dd {
+  margin: 0 0 1.5em;
+  padding: 0;
+  font-size: 80%;
+  line-height: 1.4em;
+}
+dl strong {
+  display: block;
+}
+dl em {
+  display: block;
+  font-size: 110%;
+  margin: .15em 0 .5em;
+  font-style: bold;
+}
+#footer {
+  display: none;
+}
+#footer + p {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+}
 
-</script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-     <script src="javascripts/main.js"></script>
-  </head>
+@media screen and (min-width: 37.5em) {
+  body {
+    padding: 2em 0;
+  }
+  blockquote {
+    top: 10px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: .5em;
+  }
+  ol {
+    margin: 0 0 0 1em;
+  }
+  ol li {
+    width: 50%;
+    margin: 0;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2) {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 57em) {
+  .container {
+    width: 912px;
+  }
+  .resume {
+    position: relative;
+    padding: 40px 50px;
+  }
+  blockquote {
+    top: 40px;
+    right: 50px;
+    position: absolute;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+  h3 {
+    float: left;
+    width: 16%;
+  }
+  h3+p {
+    float: left;
+    width: 84%;
+  }
+  ul li {
+    width: 28%;
+    float: left;
+  }
+  ul dl dt {
+    font-size: 122%;
+    font-weight: normal;
+    margin-bottom: .75em;
+  }
+  ul dl dd {
+    padding: 0 4em 0 0;
+  }
+  ol {
+    float: left;
+    width: 84%;
+    margin: .6em 0 0;
+  }
+  ol li {
+    width: 33%;
+    margin: 0;
+  }
+  ol li:nth-child(3n) {
+    width: 34%;
+  }
+  ol li:nth-child(1),
+  ol li:nth-child(2),
+  ol li:nth-child(3) {
+    border-top: none;
+  }
+  dl {
+    margin: .5em 0 0;
+  }
+  dl strong {
+    float: right;
+    margin-top: -2em;
+  }
+  dl em {
+    font-size: 130%;
+    font-style: normal;
+  }
+}
 
-  <body>
+</style>
+</head>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jojo89">@jojo89</a>
+<body class="">
 
-          <h1 id="project_title">Joseph Burtoft's Portfolio Page</h1>
-          <h2 id="project_tagline">Checkout some of the project I made when I was rookie and wasn't working for the man. </h2>
+<div class="container">
+    <div class="resume">
+        <h1>Joseph Burtoft</h1>
 
-        </header>
-    </div>
-    
-<ul class="page-list tabs">
-  <li class="active"><a class="#tab1">Bio</a></li>
-  <li><a class="#tab2">Projects</a></li>
-  <li><a class="#tab3">Snippets</a></li>
-  <li><a class="#tab4">Contact</a></li>
-</ul>
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a name="joseph-burtofts-portfolio-page" class="anchor" href="#joseph-burtofts-portfolio-page"><span class="octicon octicon-link"></span></a></h1>
-
-<div class="tab" id="tab1">
-<h2>
-  <a name="about-me" class="anchor" href="#about-me">
-    <span class="octicon octicon-link"></span>
-  </a>About Me
-</h2>
-
-<div class="personal">
-  <p>Developer of web-based applications and fan of object-oriented design. Currently living in the city of Cin and working with some true class acts at <a href="http://www.ahalogy.com/">Ahalogy</a></p>
-<img src="https://1.gravatar.com/avatar/685a7bcfc0fd1d4b4987e349b94c58f0?d=https%3A%2F%2Fidenticons.github.com%2Fb1969092186685f7f567e310e23746e7.png&r=x&s=440" class="photo">
-</div>
-
-<h2>
-<a name="relevant-skills" class="anchor" href="#relevant-skills"><span class="octicon octicon-link"></span></a>Relevant Skills</h2>
-<ul class="skillz">
-  <li>Ruby</li>
-  <li>Cucumber</li>
-  <li>JavaScript</li>
-  <li>CoffeeScript</li>
-  <li>Rails</li>
-  <li>Sinatra</li>
-  <li>Rspec</li>
-  <li>Jquery</li>
-  <li>SQL</li>
-  <li>Redis</li>
-  <li>Heroku</li>
-</ul>
+<h2>Web Developer</h2>
 
 
-<h2>
-<a name="projects" class="anchor" href="#projects"><span class="octicon octicon-link"></span></a>Work Experience</h2>
-<h2>
-<ul class="skillz">
-  <li><a href="https://visible.vc/">Visible </a>- Contracted Web Developer</li>
-  <li><a href="http://www.ahalogy.com/">Ahalogy </a>- Rails Developer</li>
-</ul>
-</div>
 
-<div class="tab" id="tab2">
-<h3>
-<a name="city-pulse" class="anchor" href="#city-pulse"><span class="octicon octicon-link"></span></a><a href="http://www.citypulse.io/">City Pulse</a>
-</h3>
+<hr />
 
-<div class="personal">
-<p>City Pulse is a project I started with a team of guys from Chicago. The site was designed to give the user a digital visualization of the city of Chicago. We used six APIs that supplied us with geolocated data that we could plot using google maps. This project incorporates web sockets for persisting data from the server to the client in a free flow without a trigger. the site also incorporates the use of cron tasks that fetch fresh data from APIs to be held and then displayed to our users. we chose to retrieve our data via cron rather than on a user action to reduce the rate of API calls from the current amount of users to a constant 15 a minute. Unfortunately this project is no longer hosted.(Heroku is getting a bit expensive.) </p>
-<img src="images/dbcpr.png">
-</div>
-<h3>
-<a name="gold-rush" class="anchor" href="#gold-rush"><span class="octicon octicon-link"></span></a><a href="http://gold-rush.herokuapp.com/">Gold Rush</a>
-</h3>
+<h3 id="profile">Expertise</h3>
 
-<div class="personal">
-<p>Gold Rush is personal project I made to work on my JavaScript skills and also learn a new open socket technology called Firebase. The game simulates a Pac-Man style game in which both players are trying to collect as many Gold pieces as possible. all player movement and score updates are run through the Firebase server and then on to each players screen. I made this back in January in hopes of impressing the guys at firebase.</p>
-<img src="images/goldrush.png">
-</div>
+<p>Succinctly writing maintainable object oriented code for the server-side and client-side. Specializing in the Ruby on Rails framework.</p>
 
-<h5>
-<a name="repo" class="anchor" href="#repo"><span class="octicon octicon-link"></span></a><a href="https://github.com/jojo89/firebase">Repo</a>
-</h5>
+<hr />
 
-<h3>
-<a name="cp" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="http://creepin-out.herokuapp.com/">Creep'in Out</a>
-</h3>
-<div class="personal">
-<p>Creep'in out was an independent project I worked on that gives the user the ability to center on a region of google maps and pull in all the geolocated tweets from that region. The map then displays the tweet where it was tweeted on the map. This project was some what of a predecessor to City Pulse and helped us get a vision of what we wanted City Pulse to become. </p>
-<img src="images/cpino.png">
-</div><h3>
-<a name="cp" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="http://creepin-out.herokuapp.com/">Farkle</a>
-</h3>
-<div class="personal">
-<p>I built this app while trying to get an apprenticeship with the company NEO. Thier challenge was to build a full functioning farkle game on the command line, but I decided to take it up a notch and make a web app. I ended up getting a job at Ahalogy, and decided against the apprenticeship. The people at NEO were true delights though. </p>
-<img src="images/farkle.png">
-</div>
-<h5>
-<a name="repo-1" class="anchor" href="#repo-1"><span class="octicon octicon-link"></span></a><a href="https://github.com/jojo89/goog_the_map">Repo</a>
-</h5>
-</div>
+<h3 id="skills">Skills</h3>
 
-<div class="tab" id="tab3">
-<h2>
-  <a name="about-me" class="anchor" href="#about-me">
-    <span class="octicon octicon-link"></span>
-  </a>Snippets
-</h2>
-<p><span class="ruby">Ruby</span>- This code snippet is from a project where I was implementing an html parser in ruby. I had a situation where I had to split an html element at a certain word, but given the fact that the html elements are often nested I had to develop a recursive method that would divide each html element that this word was encompassed by until it reached an element who's content contained only text.</p>
-<pre>
-  #this is a method on a class that is called paragraph
-  #paragraph class iherits from the element class
-  #the idea is that if a paragraph is too large we call this method and split it at the paragraphs splitting point
-  #this recursively calls split_element in the event that the splitting point falls upon another element in the current element
-  
-  #called on the paragraph class that inherits from the element class 
-  
-  def split_paragraph
-    element_children.each do |element|
-      if words_left_in_current >= element.word_count
-        current.add_child(element.nokogiri_object)
-      elsif element.name == 'text'
-        split_text_node(element)
-      else
-        element.split_element(words_left_in_current).each_with_index do |half, index|
-          pair[index].add_child(half.nokogiri_object)
-        end
-      end
-    end
-    pair
-  end
- 
-  #called on the element class 
-
-  def split_element(words_left)
-    element_children.each do |element|
-      if words_left >= element.word_count
-        current(words_left).add_child(element.nokogiri_object)
-        words_left -= element.word_count
-      elsif first_card_is_full == true
-        pair[1].add_child(element.nokogiri_object)
-      elsif element.name == 'text'
-        split_text_node(element, words_left)
-        self.first_card_is_full = true
-      else
-        split_and_add_child(element, words_left)
-      end
-    end
-    pair
-  end
-</pre>
-<p><span class="rails">Rails</span>- This is a rails model validation that is checking html to see if it violates a sanity check for displaying in our UI. If the html violates the criteria check we save the violation in the database and flag the html as needing attention.</p>
-<pre>
-
-  def too_many_cards?
-    card_array.count > card_limit
-  end
-
-  def card_limit
-    256
-  end
-
-  def div_too_long?
-    card_array.select { |section| section.content.length > 1351 }.count > 0
-  end
-
-  def no_images?
-    nokogiri_content.css('img').empty?
-  end
-
-  def validate_cardified_content
-    if cardified_content
-      fail ArticleErrorTooManyCards.new(cardified_content, self) if too_many_cards?
-      fail ArticleErrorDivTooLarge.new(cardified_content, self) if div_too_long?
-      fail ArticleErrorNoImages.new(cardified_content, self) if no_images?
-    end
-  end
-
-  def check_cardfied_content
-    begin
-      validate_cardified_content
-    rescue => e
-      self.needs_attention = true
-      self.needs_attention_reason = e.reason
-      self.cardified_content = cardified_content_was
-    end
-  end
-</pre>
-</div>
-
-<div class="tab" id="tab4">
-<p>Contact</p>
-<h3>
-<a name="fellow-contributors-1" class="anchor" href="#fellow-contributors-1"><span class="octicon octicon-link"></span></a>Fellow developers I've had the pleasure to work with. </h4>
 <ul>
-<li><a href="https://github.com/Geesu" class="user-mention">@Geesu</a></li>
-<li><a href="https://github.com/RobinDaugherty" class="user-mention">@RobinDaugherty</a></li>
-<li><a href="https://github.com/vasman" class="user-mention">@vasman</a></li>
-<li><a href="https://github.com/nbatalla03" class="user-mention">@nbatalla03</a></li>
-<li><a href="https://github.com/klustig88" class="user-mention">@klustig88</a></li>
-<li><a href="https://github.com/ztnark" class="user-mention">@ztnark</a></li>
-<li><a href="https://github.com/GeoffCrittenden" class="user-mention">@GeoffCrittenden</a></li>
-<li><a href="https://github.com/hdicksonjr" class="user-mention">@hdicksonjr</a></li>
-<li><a href="https://github.com/scottmascio2115" class="user-mention">@scottmascio2115</a></li>
+<li><dl>
+<dt>Test Driven Development</dt>
+<dd>Building software from the specifications up</dd>
+</dl></li>
+<li><dl>
+<dt>Object-Oriented Design</dt>
+<dd>Keeping code maintainable and legible to anyone who reads it</dd>
+</dl></li>
+<li><dl>
+<dt>Agile Development</dt>
+<dd>Working on a project in small digestible sprints and maintaining transparency throughout the team</dd>
+</dl></li>
 </ul>
 
+<hr />
 
-<p><a href="http://www.linkedin.com/in/jburtoft">LinkedIn</a>
-<a href="mailto:josephburtoft89@gmail.com">josephburtoft89@gmail.com</a>
-574-527-3094</p>
-      </section>
-    </div>    
-  </div>
+<h3 id="technical">Technical</h3>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="social"><a href="https://soundcloud.com/freezelapd"><img src="images/Soundcloud-white-round-64.png"></a><a href="https://twitter.com/crazyboutelvish"><img src="images/Twitter-Blue-Flat-Round-64.png"></a><a href="http://www.linkedin.com/in/jburtoft"><img src="images/Linked In-64.png"></a><a href="https://github.com/jojo89"><img src="images/Github-64.png"></a></p> 
-      </footer>
+<ol>
+<li>HTML &amp;&amp; CSS</li>
+<li>Javascript &amp;&amp; Coffeescript</li>
+<li>Jquery</li>
+<li>Ruby</li>
+<li>SQL</li>
+<li>Rspec &amp;&amp; Cucumber</li>
+<li>Ruby on Rails</li>
+<li>Git Version Control</li>
+</ol>
+
+<hr />
+
+<h3 id="experience">Education</h3>
+<ul>
+<li><dl>
+<dt>Purdue University</dt>
+<dd>Bachelor of Arts in Communication</dd>
+</dl></li>
+<li><dl>
+<dt>DevBootCamp</dt>
+<dd>Software apprentice</dd>
+</dl></li>
+</ul>
+
+<hr />
+
+<h3 id="experience">Experience</h3>
+
+<dl>
+
+<dt>Visible</dt>
+<dd><em>Contracted Web Developer</em>
+<strong>November 2013- January 2014</strong>
+Worked on the companies main Ruby on Rails project. Creating interactive JavaScript and implementing third-party apis.</dd>
+
+<dt>Ahalogy</dt>
+<dd><em>Ruby on Rails Developer</em>
+<strong>January 2014-present</strong>
+Developing server interactions for web applications and automation process of transforming html to a mobile format. 
+</dd>
+</dl>
+
+<hr />
+
+<h3 id="footer">Footer</h3>
+
+<p>Joseph Burtoft &#8212; <a href="http://jojo89.github.io/">http://jojo89.github.io/</a> &#8212; (574) 527-3094</p>
+
+<hr />
+
     </div>
-  </body>
+</div>
+
+</body>
 </html>
