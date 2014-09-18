@@ -133,12 +133,14 @@
     <span class="octicon octicon-link"></span>
   </a>Snippets
 </h2>
-<p>This code snippet is from a project where I was implementing an html parser in ruby. I had a situation where I had to split an html element at certain word, but given the fact that html elements are often nested I had to develop a recursive method that would divide each html element until it's contents contained only text.</p>
+<p><span class="ruby">Ruby</span>- This code snippet is from a project where I was implementing an html parser in ruby. I had a situation where I had to split an html element at a certain word, but given the fact that the html elements are often nested I had to develop a recursive method that would divide each html element that this word was encompassed by until it reached an element who's content contained only text.</p>
 <pre>
   #this is a method on a class that is called paragraph
   #paragraph class iherits from the element class
   #the idea is that if a paragraph is too large we call this method and split it at the paragraphs splitting point
-  #this recursively calls split_element in the event that the splitting point falls upon an element
+  #this recursively calls split_element in the event that the splitting point falls upon another element in the current element
+  
+  #called on the paragraph class that inherits from the element class 
   
   def split_paragraph
     element_children.each do |element|
@@ -154,6 +156,8 @@
     end
     pair
   end
+ 
+  #called on the element class 
 
   def split_element(words_left)
     element_children.each do |element|
@@ -172,8 +176,42 @@
     pair
   end
 </pre>
+<p><span class="rails">Rails</span>- This is a rails model validation that is checking html to see if it violates a sanity check for displaying in our UI. If the html violates the criteria check we save the violation in the database and flag the html as needing attention.</p>
 <pre>
 
+  def too_many_cards?
+    card_array.count > card_limit
+  end
+
+  def card_limit
+    256
+  end
+
+  def div_too_long?
+    card_array.select { |section| section.content.length > 1351 }.count > 0
+  end
+
+  def no_images?
+    nokogiri_content.css('img').empty?
+  end
+
+  def validate_cardified_content
+    if cardified_content
+      fail ArticleErrorTooManyCards.new(cardified_content, self) if too_many_cards?
+      fail ArticleErrorDivTooLarge.new(cardified_content, self) if div_too_long?
+      fail ArticleErrorNoImages.new(cardified_content, self) if no_images?
+    end
+  end
+
+  def check_cardfied_content
+    begin
+      validate_cardified_content
+    rescue => e
+      self.needs_attention = true
+      self.needs_attention_reason = e.reason
+      self.cardified_content = cardified_content_was
+    end
+  end
 </pre>
 </div>
 
