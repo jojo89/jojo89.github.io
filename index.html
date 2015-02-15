@@ -31,16 +31,14 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/jojo89">@jojo89</a>
 
-          <h1 id="project_title">Joseph Burtoft's Portfolio Page</h1>
-          <h2 id="project_tagline">Checkout some of the project I made when I was rookie and wasn't working for the man. </h2>
+          <h1 id="project_title">Joseph Burtoft</h1>
 
         </header>
     </div>
     
 <ul class="page-list tabs">
   <li class="active"><a class="#tab1">Bio</a></li>
-  <li><a class="#tab2">Projects</a></li>
-  <li><a class="#tab3">Snippets</a></li>
+  <li><a class="#tab2">Personal Projects</a></li>
   <li><a class="#tab4">Contact</a></li>
 </ul>
     <!-- MAIN CONTENT -->
@@ -64,17 +62,10 @@
 <h2>
 <a name="relevant-skills" class="anchor" href="#relevant-skills"><span class="octicon octicon-link"></span></a>Relevant Skills</h2>
 <ul class="skillz">
-  <li>Ruby</li>
-  <li>Cucumber</li>
-  <li>JavaScript</li>
-  <li>CoffeeScript</li>
-  <li>Rails</li>
-  <li>Sinatra</li>
-  <li>Rspec</li>
-  <li>Jquery</li>
-  <li>SQL</li>
-  <li>Redis</li>
-  <li>Heroku</li>
+  <li>Front-End Development</li>
+  <li>Back-End Development</li>
+  <li>Web Design</li>
+  <li>Data Structuring</li>
 </ul>
 
 
@@ -89,153 +80,18 @@
 
 <div class="tab" id="tab2">
 <h3>
-<a name="city-pulse" class="anchor" href="#city-pulse"><span class="octicon octicon-link"></span></a><a href="http://www.citypulse.io/">City Pulse</a>
-</h3>
-
-<div class="personal">
-<p>City Pulse is a project I started with a team of guys from Chicago. The site was designed to give the user a digital visualization of the city of Chicago. We used six APIs that supplied us with geolocated data that we could plot using google maps. This project incorporates web sockets for persisting data from the server to the client in a free flow without a trigger. the site also incorporates the use of cron tasks that fetch fresh data from APIs to be held and then displayed to our users. we chose to retrieve our data via cron rather than on a user action to reduce the rate of API calls from the current amount of users to a constant 15 a minute. Unfortunately this project is no longer hosted.(Heroku is getting a bit expensive.) </p>
-<img src="images/dbcpr.png">
-<h5>
-<a name="repo" class="anchor" href="#repo"><span class="octicon octicon-link"></span></a><a href="https://github.com/ztnark/CityPulse">Repo</a>
-</h5>
-</div>
-<h3>
-<a name="gold-rush" class="anchor" href="#gold-rush"><span class="octicon octicon-link"></span></a><a href="http://gold-rush.herokuapp.com/">Gold Rush</a>
-</h3>
-
-<div class="personal">
-<p>Gold Rush is personal project I made to work on my JavaScript skills and also learn a new open socket technology called Firebase. The game simulates a Pac-Man style game in which both players are trying to collect as many Gold pieces as possible. all player movement and score updates are run through the Firebase server and then on to each players screen. I made this back in January in hopes of impressing the guys at firebase.</p>
-<img src="images/goldrush.png">
-</div>
-
-<h5>
-<a name="repo" class="anchor" href="#repo"><span class="octicon octicon-link"></span></a><a href="https://github.com/jojo89/firebase">Repo</a>
-</h5>
-
-<h3>
 <a name="cp" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="http://creepin-out.herokuapp.com/">Creep'in Out</a>
+ (Sinatra, Angular) <span class="red">*best one</span></h3>
+<h3>
+<a name="cp" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="http://frkl.herokuapp.com/">Farkle</a> (Rails JS)
 </h3>
-<div class="personal">
-<p>Creep'in out was an independent project I worked on that gives the user the ability to center on a region of google maps and pull in all the geolocated tweets from that region. The map then displays the tweet where it was tweeted on the map. This project was some what of a predecessor to City Pulse and helped us get a vision of what we wanted City Pulse to become. </p>
-<img src="images/cpino.png">
-</div><h3>
-<a name="cp" class="anchor" href="#"><span class="octicon octicon-link"></span></a><a href="http://creepin-out.herokuapp.com/">Farkle</a>
+<h3>
+<a name="gold-rush" class="anchor" href="#gold-rush"><span class="octicon octicon-link"></span></a><a href="http://gold-rush.herokuapp.com/">Gold Rush</a> (Sinatra FireBase JS)
 </h3>
-<div class="personal">
-<p>I built this app while trying to get an apprenticeship with the company NEO. Thier challenge was to build a full functioning farkle game on the command line, but I decided to take it up a notch and make a web app. I ended up getting a job at Ahalogy, and decided against the apprenticeship. The people at NEO were true delights though. </p>
-<img src="images/farkle.png">
-</div>
-<h5>
-<a name="repo-1" class="anchor" href="#repo-1"><span class="octicon octicon-link"></span></a><a href="https://github.com/jojo89/goog_the_map">Repo</a>
-</h5>
 </div>
 
-<div class="tab" id="tab3">
-<h2>
-  <a name="about-me" class="anchor" href="#about-me">
-    <span class="octicon octicon-link"></span>
-  </a>Snippets
-</h2>
-<p><span class="ruby">Ruby</span>- This code snippet is from a project where I was implementing an html parser in ruby. I had a situation where I had to split an html element at a certain word, but given the fact that the html elements are often nested I had to develop a recursive method that would divide each html element that this word was encompassed by until it reached an element who's content contained only text.</p>
-<pre>
-  #this is a method on a class that is called paragraph
-  #paragraph class iherits from the element class
-  #the idea is that if a paragraph is too large we call this method and split it at the paragraphs splitting point
-  #this recursively calls split_element in the event that the splitting point falls upon another element in the current element
-  
-  #called on the paragraph class that inherits from the element class 
-  
-  def split_paragraph
-    element_children.each do |element|
-      if words_left_in_current >= element.word_count
-        current.add_child(element.nokogiri_object)
-      elsif element.name == 'text'
-        split_text_node(element)
-      else
-        element.split_element(words_left_in_current).each_with_index do |half, index|
-          pair[index].add_child(half.nokogiri_object)
-        end
-      end
-    end
-    pair
-  end
- 
-  #called on the element class 
-
-  def split_element(words_left)
-    element_children.each do |element|
-      if words_left >= element.word_count
-        current(words_left).add_child(element.nokogiri_object)
-        words_left -= element.word_count
-      elsif first_card_is_full == true
-        pair[1].add_child(element.nokogiri_object)
-      elsif element.name == 'text'
-        split_text_node(element, words_left)
-        self.first_card_is_full = true
-      else
-        split_and_add_child(element, words_left)
-      end
-    end
-    pair
-  end
-</pre>
-<p><span class="rails">Rails</span>- This is a rails model validation that is checking html to see if it violates a sanity check for displaying in our UI. If the html violates the criteria check we save the violation in the database and flag the html as needing attention.</p>
-<pre>
-
-  def too_many_cards?
-    card_array.count > card_limit
-  end
-
-  def card_limit
-    256
-  end
-
-  def div_too_long?
-    card_array.select { |section| section.content.length > 1351 }.count > 0
-  end
-
-  def no_images?
-    nokogiri_content.css('img').empty?
-  end
-
-  def validate_cardified_content
-    if cardified_content
-      fail ArticleErrorTooManyCards.new(cardified_content, self) if too_many_cards?
-      fail ArticleErrorDivTooLarge.new(cardified_content, self) if div_too_long?
-      fail ArticleErrorNoImages.new(cardified_content, self) if no_images?
-    end
-  end
-
-  def check_cardfied_content
-    begin
-      validate_cardified_content
-    rescue => e
-      self.needs_attention = true
-      self.needs_attention_reason = e.reason
-      self.cardified_content = cardified_content_was
-    end
-  end
-</pre>
-</div>
 
 <div class="tab" id="tab4">
-<p>Contact</p>
-<h3>
-<a name="fellow-contributors-1" class="anchor" href="#fellow-contributors-1"><span class="octicon octicon-link"></span></a>Fellow developers I've had the pleasure to work with. </h4>
-<ul>
-<li><a href="https://github.com/Geesu" class="user-mention">@Geesu</a></li>
-<li><a href="https://github.com/RobinDaugherty" class="user-mention">@RobinDaugherty</a></li>
-<li><a href="https://github.com/vasman" class="user-mention">@vasman</a></li>
-<li><a href="https://github.com/nbatalla03" class="user-mention">@nbatalla03</a></li>
-<li><a href="https://github.com/klustig88" class="user-mention">@klustig88</a></li>
-<li><a href="https://github.com/ztnark" class="user-mention">@ztnark</a></li>
-<li><a href="https://github.com/GeoffCrittenden" class="user-mention">@GeoffCrittenden</a></li>
-<li><a href="https://github.com/hdicksonjr" class="user-mention">@hdicksonjr</a></li>
-<li><a href="https://github.com/scottmascio2115" class="user-mention">@scottmascio2115</a></li>
-</ul>
-
-
-<p><a href="http://www.linkedin.com/in/jburtoft">LinkedIn</a>
 <a href="mailto:josephburtoft89@gmail.com">josephburtoft89@gmail.com</a>
 574-527-3094</p>
       </section>
@@ -245,7 +101,7 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="social"><a href="https://soundcloud.com/freezelapd"><img src="images/Soundcloud-white-round-64.png"></a><a href="https://twitter.com/crazyboutelvish"><img src="images/Twitter-Blue-Flat-Round-64.png"></a><a href="http://www.linkedin.com/in/jburtoft"><img src="images/Linked In-64.png"></a><a href="https://github.com/jojo89"><img src="images/Github-64.png"></a></p> 
+        <p class="social"><a href="https://soundcloud.com/freezelapd"><img src="images/1423955006_soundcloud-64.png"></a><a href="https://twitter.com/crazyboutelvish"><img src="images/1423955021_twitter_letter-64.png"></a><a href="http://www.linkedin.com/in/jburtoft"><img src="images/1423954984_linkedin-64.png"></a><a href="https://github.com/jojo89"><img src="images/1423955068_github-64.png"></a></p> 
       </footer>
     </div>
   </body>

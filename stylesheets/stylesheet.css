@@ -300,17 +300,22 @@ Full-Width Styles
   padding: 50px 10px 30px 10px;
 }
 
+.red{
+  color: rgb(140, 0, 0);
+}
 #project_title {
   margin: 0;
   color: #000;
   font-size: 42px;
   font-weight: 700;
-  text-shadow: #111 0px 0px 10px;
 }
 
 ul.page-list{
   text-align: center;
   padding-top: 50px;
+}
+.page-list li a{
+  color: white;
 }
 
 .page-list li{
