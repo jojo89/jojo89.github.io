@@ -54,7 +54,7 @@ Theme Styles
 body {
   box-sizing: border-box;
   color: #FFFFFF;
-  background: #212121;
+  background: #FFFFFF;
   font-size: 20px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   line-height: 1.5;
@@ -122,7 +122,7 @@ a {
   -ms-transition: text-shadow 0.5s ease;
 }
 
-a:hover, a:focus { text-shadow: 1px 2px 3px #fff; }
+a:hover, a:focus { text-shadow: 1px 2px 3px #000; }
 
 footer a {
   color: #F2F2F2;
@@ -314,9 +314,10 @@ Full-Width Styles
 ul.page-list{
   text-align: center;
   padding-top: 50px;
+  background:white;
 }
-.page-list li a{
-  color: white;
+.page-list li a {
+color: black;
 }
 
 .page-list li{
